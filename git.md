@@ -203,14 +203,14 @@ $ git push origin master
 
 ```bash
 $ git push origin master
-To https://github.com/edutak/TIL--nlp.git
+To https://github.com/Lee-JeongMin/TIL.git
  ! [rejected]        master -> master (fetch first)
-error: failed to push some refs to 'https://github.com/utak/TIL--nlp.git'
-hint: Updates were rejected because the remote containsork that you do
-hint: not have locally. This is usually caused by anoth repository pushing
-hint: to the same ref. You may want to first integrate e remote changes
+error: failed to push some refs to 'https://github.com/Lee-JeongMin/TIL.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
 hint: (e.g., 'git pull ...') before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push -elp' for details.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
 * 이때, 원격 저장소 커밋 목록들과 로컬 저장소의 `git log --oneline`으로 비교해보면 다른점이 반드시 있을 것이다.
@@ -221,39 +221,30 @@ hint: See the 'Note about fast-forwards' in 'git push -elp' for details.
 
   ```bash
   $ git pull origin master
-  remote: Enumerating objects: 5, done.
-  remote: Counting objects: 100% (5/5), done.
-  remote: Compressing objects: 100% (3/3), done.
-  remote: Total 3 (delta 2), reused 0 (delta 0), pack-reud 0
-  Unpacking objects: 100% (3/3), 704 bytes | 7.00 KiB/s, ne.
-  From https://github.com/edutak/TIL--nlp
-   * branch            master     -> FETCH_HEAD
-     173cf24..68ec3f5  master     -> origin/master
-  Merge made by the 'recursive' strategy.
-   "Github \355\231\234\354\232\251 \354\230\210\354\213\
-   1 file changed, 1 insertion(+)
+  remote: Enumerating objects: 3, done.
+  [master 5832fd3] Merge branch 'master' of https://github.com/Lee-JeongMin/TIL
+   Date: Wed Jul 8 16:41:34 2020 +0900
   ```
-
+  
   * 이때 Vim 편집기 화면이 뜨는데, 커밋 메세지를 작성할 수 있는 곳이다.
     * `ese`를 누르고 `: wq`를 순서대로 입력한다.
-
+  
   ![캡처dsf](markdown-images/%EC%BA%A1%EC%B2%98dsf.PNG)
-
+  
   2) 다시 push를 한다.
-
-  ```bash
-  ![adf](../adf.PNG$ git log --oneline
-  c30820c (HEAD -> master) Merge branch 'master' of https://github.com/edutak/TIL--nlp
-  e151783 Add README
-  68ec3f5 Update Github 활용 예시.md
-  173cf24 Update files
-  187ed91 Add clone command at home
-  b523707 Update git.md
-  6b6d274 Init
+  
+```bash
+  $ git log --oneline
+  b46b0f7 (HEAD -> master, origin/master) update git.md
+5832fd3 Merge branch 'master' of https://github.com/Lee-JeongMin/TIL
+  e3748ac update git.md
+511c85e Delete git 주의사항.md
+  24153f7 Update git.md
+b877964 Add README.md
+  450b2a0 update git.md
+  0a0e7ff Update git.md
+  28fb6b6 Init
   $ git push origin master
   ```
-
-  
-
   
 
