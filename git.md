@@ -32,7 +32,7 @@ Initialized empty Git repository in C:/Users/student/Desktop/TIL/.git/
 * .git 폴더가 숨김 폴더로 생성되며, git bash에서는 (master) 라고 표기된다.
 * 반드시 git으로 활용되고 있는 폴더 아래에서 저장소를 선언하지 말자.
 
-### 1.2 . add
+### 1.2 . `add`
 
 > 커밋 대상 파일들을 추가한다.
 
@@ -56,12 +56,12 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
+`add` 후 상황
+
 ```bash
 $ git add .
 $ git status
 ```
-
-`add` 후 상황
 
 ```bash
 On branch master
@@ -84,7 +84,7 @@ $ git add git.md markdown.md # 특정 파일 여러개
 $ git add markdown-images/ # 특정 디렉토리
 ```
 
-## 1.3. `commit`
+### 1.3. `commit`
 
 > 이력을 확정 짓는 명령어
 
@@ -95,6 +95,10 @@ $ git commit -m '커밋메세지'
  create mode 100644 git.md
  create mode 100644 "markdown-images/\354\272\241\354\262\230.PNG"
  create mode 100644 markdown.md
+ $ git status
+ # 커밋할 것도 없고, 작업할 것도 없음
+On branch master
+nothing to commit, working tree clean
 ```
 
 #### `log`
@@ -103,7 +107,87 @@ $ git commit -m '커밋메세지'
 
 ```bash
 $ git log
+Author: Lee-JeongMin <leejm456@gmail.com>
+Date:   Wed Jul 8 14:41:51 2020 +0900
+
+    Init
+
+# 최근 n개 이력(1개)
 $ git log -1
+Author: Lee-JeongMin <leejm456@gmail.com>
+Date:   Wed Jul 8 14:41:51 2020 +0900
+
+    Init
+
+# 간략한 표현
 $ git log --oneline
+28fb6b6 (HEAD -> master) Init
+
+# 최근 n개 이력을 간략하게
+$ git log --oneline -1
+28fb6b6 (HEAD -> master) Init
+
 ```
+
+## 2. 원격 저장소 활용
+
+> 원격 저장소는(remote repository)를 제공하는 서비스는 많다.(gitlab, bitbucket)
+>
+> 그 중에서 github를 기준으로 설명하겠다.
+
+### 2.1. 원격 저장소 등록
+
+> git아! 원격 저장소(remote)로 등록해줘(add) origin이라는 이름으로 URL을!
+
+```bash
+$ git remote add origin 저장소url
+```
+
+* 저장소 확인
+
+  ```bash
+  $ git romote -v
+  origin  https://github.com/Lee-JeongMin/TIL.git (fetch)
+  origin  https://github.com/Lee-JeongMin/TIL.git (push)
+  ```
+
+* 저장소 삭제
+
+  origin으로 지정된 저장소를 rm(remove)한다.
+
+  ``` bash
+  $ git remote rm origin
+  ```
+
+### 2.2. `push`
+
+origin으로 설정된 원격저장소의 master 브랜치로 push한다.
+
+```bash
+$ git push origin master
+```
+
+### 2.3. `clone`
+
+> 원격 저장소를 복제해온다.
+
+```bash
+~/집 $ git clone https://github.com/Lee-JeongMin/TIL.git
+~/집 $ cd TIL
+~/집/TIL (master) $
+```
+
+* 복제하는 경우 원격저장소 이름의 폴더가 생성된다.
+* 해당 폴더로 이동하여 활용하면 된다.
+* 이루 작업을 하는 경우 `add`, `commit`, `push`
+
+### 2.4. `pull`
+
+> 원격 저장소의 변경사항을 받아온다.
+
+```bash
+~/Desktop/TIL (master) $ git pull origin master
+```
+
+
 
