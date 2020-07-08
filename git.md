@@ -237,7 +237,7 @@ hint: See the 'Note about fast-forwards' in 'git push -elp' for details.
   * 이때 Vim 편집기 화면이 뜨는데, 커밋 메세지를 작성할 수 있는 곳이다.
     * `ese`를 누르고 `: wq`를 순서대로 입력한다.
 
-  ![adf](markdown-images/adf.PNG)
+  
 
   2) 다시 push를 한다.
 
