@@ -6,8 +6,8 @@
 
 * [markdown](https://github.com/Lee-JeongMin/TIL/blob/master/markdown.md)
 * [git](https://github.com/Lee-JeongMin/TIL/blob/master/git.md)
-* [Machine Learning](#Machine_Learning)
-* [Deep Learning](#Deep_Learning)
+* [Machine Learning](#Machine-Learning)
+* [Deep Learning](#Deep-Learning)
 
 
 
