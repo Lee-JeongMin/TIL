@@ -42,6 +42,6 @@
 
 * Autoencoder
 
-* [GAN]([https://github.com/Lee-JeongMin/TIL/blob/master/%EC%83%9D%EC%84%B1%EC%A0%81%20%EC%A0%81%EB%8C%80%20%EC%8B%A0%EA%B2%BD%EB%A7%9D(GAN).md](https://github.com/Lee-JeongMin/TIL/blob/master/생성적 적대 신경망(GAN).md)
+* [GAN](https://github.com/Lee-JeongMin/TIL/blob/master/%EC%83%9D%EC%84%B1%EC%A0%81%20%EC%A0%81%EB%8C%80%20%EC%8B%A0%EA%B2%BD%EB%A7%9D(GAN).md](https://github.com/Lee-JeongMin/TIL/blob/master/생성적 적대 신경망(GAN).md)
 
   
