@@ -2,10 +2,14 @@
 
 > 매일 매일  배운 것을 정리하기
 
-
+### Categories
 
 * [markdown](https://github.com/Lee-JeongMin/TIL/blob/master/markdown.md)
 * [git](https://github.com/Lee-JeongMin/TIL/blob/master/git.md)
+* [Machine Learning](#Machine Learning)
+* [Deep Learning](#Deep Learning)
+
+
 
 ## Machine Learning
 
@@ -42,6 +46,6 @@
 
 * Autoencoder
 
-* GAN
+* [GAN](https://github.com/Lee-JeongMin/TIL/blob/master/Deep_Learning/Generative-Adversarial-Network.md)
 
   
