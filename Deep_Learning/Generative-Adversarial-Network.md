@@ -6,14 +6,14 @@
 
 ### GAN 개념
 
-![GAN모델그림](markdown-images/GAN%EB%AA%A8%EB%8D%B8%EA%B7%B8%EB%A6%BC.png)
+![GAN모델그림](../markdown-images/GAN%EB%AA%A8%EB%8D%B8%EA%B7%B8%EB%A6%BC.png)
 
 * Generator 모델은 랜덤 데이터(Noise)를 입력 받아 훈련을 통해 실제 데이터와 유사한 가짜 데이터를 생성한다.
 *  Discriminator 모델은 실제 데이터(1)와 가짜 데이터(0)를 판별한다.
 * Discriminator 모델은 0 ~ 1사이의 값(sigmoid)을 출력한다. (0 = 가짜, 1 = 진짜)
 * Generator 모델은 Discriminator 모델이 구별하지 못하도록 실제 데이터와 유사한 가짜 데이터를 생성하고, Discriminator 모델은 실제 데이터와 가짜 데이터를 구분하도록 학습한다.
 
-![gan설명](markdown-images/gan%EC%84%A4%EB%AA%85.png)
+![gan설명](../markdown-images/gan%EC%84%A4%EB%AA%85.png)
 
 * **x** : 실제 데이터 / **z** : 랜덤데이터 / **<span style="color:blue">파란선</span> **: 모델D의 출력 / **<span style="color:green">초록선</span>** : G(z)의 분포 /  **검정선** : x의 분포
 
@@ -29,16 +29,14 @@
 
 ### GAN학습을 위한 Loss function
 
-![GAN모델설명](markdown-images/GAN%EB%AA%A8%EB%8D%B8%EC%84%A4%EB%AA%85.png)
+![GAN모델설명](../markdown-images/GAN%EB%AA%A8%EB%8D%B8%EC%84%A4%EB%AA%85.png)
 
 * GAN에서 모델 (G)와 모델 (D)를 학습시키기 위해서 위와 같은 Loss function V(D,G)을 사용한다.
 *  <span style="color:orange">모델 (G)</span>는 V(D,G)가 **최소**가 되도록 weight와 bias를 업데이트하고, <span style="color:skyblue">모델 (D)</span>는 V(D,G)가 **최대**가 되도록 weight와 bias를 업데이트한다.
 * <span style="color:orange">모델 (G)</span>는 D(G(z))가 1에 가까운 값이 나오도록 업데이트하고, <span style="color:skyblue">모델 (D)</span>는 D(x)는 1, D(G(z))는 0에 가까운 값이 나오도록 업데이트 한다.
 * 학습이 잘된경우는 모델 (D)가 x와 G(x)를 구별하지 못한다는 것은 즉, x ≈ G(z)라는 것이다.
 
-
-
-![gan_loss](markdown-images/gan_loss.png)
+![gan_loss](../markdown-images/gan_loss.png)
 
 * D(G(z))가 0일 때, 모델 (G)는 `minV(G)`가 된다.  
 * D(x)가 1이고, D(G(z))가 0일 때, 모델 (D)는 `maxV(D)`가 된다.
