@@ -49,7 +49,7 @@
 
 > GAN에 Deep Convolution 레이어를 쌓아서 만든 알고리즘
 
-![DCGAN](../TIL/markdown-images/DCGAN.png)
+![DCGAN](../markdown-images/DCGAN-1594772153353.png)
 
 ### DCGAN 개념
 
@@ -58,9 +58,7 @@
 * 모델 (G)에는 ReLU를 사용하고, 모델 (D)에는 LeakyReLU를 사용한다. 
 * 아래의 이미지는 안정적인 DCGAN을 구현하는 가이드라인이다.
 
-![DCGAN_guideline](../TIL/markdown-images/DCGAN_guideline.PNG)
-
-
+![DCGAN_guideline](../markdown-images/DCGAN_guideline-1594772165431.PNG)
 
 ### 참고 문헌
 
