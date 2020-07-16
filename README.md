@@ -8,6 +8,7 @@
 * [git](https://github.com/Lee-JeongMin/TIL/blob/master/git.md)
 * [Machine Learning](#Machine-Learning)
 * [Deep Learning](#Deep-Learning)
+* [NLP](#NLP)
 
 
 
