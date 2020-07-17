@@ -213,11 +213,11 @@ NLTK를 사용해 품사 태깅이 가능하다.
 
 #### 정규 표현식(Regular Expression)
 
-![jhkim-140117-RegularExpression-21](../markdown-images/jhkim-140117-RegularExpression-21.png)
+<img src="../markdown-images/jhkim-140117-RegularExpression-21.png" alt="jhkim-140117-RegularExpression-21" style="zoom:75%;" />
 
-![jhkim-140117-RegularExpression-191](../markdown-images/jhkim-140117-RegularExpression-191.png)
+<img src="../markdown-images/jhkim-140117-RegularExpression-191.png" alt="jhkim-140117-RegularExpression-191" style="zoom:75%;" />
 
-![jhkim-140117-RegularExpression-08-1](../markdown-images/jhkim-140117-RegularExpression-08-1.png)
+<img src="../markdown-images/jhkim-140117-RegularExpression-08-1.png" alt="jhkim-140117-RegularExpression-08-1" style="zoom:75%;" />
 
 
 
