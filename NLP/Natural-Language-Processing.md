@@ -205,7 +205,176 @@ NLTK를 사용해 품사 태깅이 가능하다.
 
 
 
+### 문서 정보 추출(Infromation Extraction from Text)
+
+>텍스트 문서로부터 특정 질문에 대한 정보를 추출하는 것
+
+
+
+#### 정규 표현식(Regular Expression)
+
+![jhkim-140117-RegularExpression-21](../markdown-images/jhkim-140117-RegularExpression-21.png)
+
+![jhkim-140117-RegularExpression-191](../markdown-images/jhkim-140117-RegularExpression-191.png)
+
+![jhkim-140117-RegularExpression-08-1](../markdown-images/jhkim-140117-RegularExpression-08-1.png)
+
+
+
+#####  re 패키지 기본 method
+
+* re.compile()
+
+* re.match(pattern, string, flags) : **문자열의 처음**부터 시작하여 패턴이 일치되는 것이 있는지 확인한다.
+
+```python
+print(re.match('su', 'super'))
+# 결과 
+# <re.Match object; span=(0, 2), match='su'>
+# span=(0, 2) : 0번째 문자부터 2번때 문자 전까지
+print(re.match('per','super'))
+# 결과
+# None
+```
+
+문자열 처음부터 찾기 때문에 중간의 문자는 따로 일치하는지 확인할 수 없기 때문에 None를 반환한다.
+
+* re.search(pattern, string, flags) : 패턴이 일치되는 것이 있는지 확인한다.
+
+```python
+print(re.search('su', 'super'))
+# 결과
+# <re.Match object; span=(0, 2), match='su'>
+
+print(re.search('per','super'))
+# 결과
+# <re.Match object; span=(2, 5), match='per'>
+```
+
+re.match와 기능은 같지만 문자열 처음부터 일치해야하는 것은 아니다. 그래서 중간 문자를 검색해도 결과가 출력되는걸 확인할 수 있다.
+
+* re. sub(pattern, repl, string, count, flags) :  패턴에 일치되는 문자열을 다은 문자열로 바꿔주는 것이다.
+
+```python
+print(re.sub('\d{4}', 'XXXX', '010-1234-5678'))
+# 결과
+# 010-XXXX-XXXX
+print(re.sub('\d{4}', 'XXXX', '010-1234-5678', count=1))
+# 결과
+# 010-XXXX-5678
+print(re.sub('[a-z]', '', 'super123'))
+# 결과
+# 123
+```
+
+count 인자는 최대 몇 개까지 치환할 것인지를 의미한다. re.sub를 통해 문자열에서 일부분을 제거할 수도 있다. 
+
+* re.split(pattern, string, maxsplit, flags) :  문자열에서 패턴을 기준으로 나누는 것
+
+```python
+result = re.split('<[^<>]*>',
+                  '<html> Wow <head> header </head> <body> Hey </body> </html>')
+
+result = list(map(lambda x: x.strip(), result))
+result = list(filter(lambda x: x != '', result))
+print(result)
+# ['Wow', 'header', 'Hey']
+```
+
+* re.findall(pattern, string, flags) : 문자열 패턴과 일치되는 모든 부분은 찾는다.
+
+```python
+print(re.findall('s', 'supper'))
+# 결과
+# ['s']
+print(re.findall('p', 'supper'))
+# 결과
+# ['p', 'p']
+print(re.findall('a', 'supper'))
+# 결과
+# []
+print(re.findall('sss', 'sssss'))
+# 결과 
+# ['sss']
+```
+
+마지막 코드의 결과를 보면 'sssss'로 s가 5개가 있음에도 'sss'가 한개만 출력이 되었다. "non-overlapping"로 반환된 리스트는 서로 겹치지 않는다는 의미이다.
+
+* re.finditer(pattern, string, flags) : re.findall과 비슷하지만 일치된 문자열의 리스트 대신에 matchObj를 반환한다.
+
+```python
+matchObj = re.finditer('s', 'supper')
+print(matchObj)
+# <callable_iterator object at 0x000001A5343AAF88>
+for Obj in matchObj:
+    print(Obj)
+    #<re.Match object; span=(0, 1), match='s'>
+```
+
+* re.fullmatch(pattern, string, flags) : 패턴과 문자열이 남는 부분 없이 완벽하게 일치하는지 검사한다.
+
+```python
+print(re.fullmatch('su', 'super'))
+# 결과
+# None
+print(re.fullmatch('super', 'super'))
+# 결과
+#<re.Match object; span=(0, 5), match='super'>
+```
+
+완벽하게 일치해야지만 결과가 나오는것을 확인할 수 있다.
+
+##### match Object 메서드
+
+| Method  | Descrption                                         |
+| ------- | -------------------------------------------------- |
+| group() | 일치된 문자열을 반환                               |
+| start() | 일치된 문자열의 시작 위치를 반환                   |
+| end()   | 일치된 문자열의 끝 위치를 반환                     |
+| span()  | 일치된 문자열의 (시작 위치, 끝 위치)를 튜플로 반환 |
+
+```python
+matchObj = re.search('match', "'matchObj' is a good name, but 'm' is convenient.")
+print(matchObj)
+# <re.Match object; span=(1, 6), match='match'>
+print(matchObj.group())
+# match
+print(matchObj.start())
+# 1
+print(matchObj.end())
+# 6
+print(matchObj.span())
+# (1, 6)
+```
+
+#### Chunking
+
+> 여러 개의 품사로 구(Phrase)를 만드는 것을 chunking이라고 하고, 이 구(Phrase)를 Chunk라고 한다.
+
+* 문법 정의 방법
+
+```python
+grammar = " NP : {<DT>?<JJ>*<NN>}"
+# <>는 tag pattern을 의미
+# 문장에서 (DT+JJ+JJ+NN), (DT+JJ+NN), (DT+NN), (JJ+NN) 등의 시퀀스를 모두 NP(명사구)로 판단한다.
+```
+
+#### Chinking
+
+> 특정 부분을 Chunk 밖으로 빼내는 것을 의미
+
+```python
+grammar = r""" 
+    NP : {<.*>+}         # 모든 것을 Chunk함
+         }<VDB|IN>+{"""  # VBD랑 IN은 Chunk에서 빼낸다.
+```
+
+
+
+
+
 ### 참고 문헌
 
 * 마코프 이미지 출처 : https://blog.naver.com/chunjein/221034077798
+* 정규 표현식 이미지 출처 :  http://www.nextree.co.kr/p4327/
 
