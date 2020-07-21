@@ -37,7 +37,7 @@ $$
 
 * 행렬  A를  위와 같은 3가지 행렬의 곱으로 나타내는 것을 M의 특이값 분해라고 한다.
 
-<img src="../markdown-images/800px-Singular_value_decomposition_visualisation.svg.png" alt="800px-Singular_value_decomposition_visualisation.svg" style="zoom: 67%;" />
+<img src="../markdown-images/800px-Singular_value_decomposition_visualisation.svg.png" alt="800px-Singular_value_decomposition_visualisation.svg" style="zoom: 55%;" />
 
 ### LSA 모형
 
@@ -63,6 +63,6 @@ A_k는 위와 같은 식으로 만들어지게 되고 가장 중요한 토픽만
 
 ### 참고 문헌
 
-* [LSA 이미지 출처]([https://ratsgo.github.io/from%20frequency%20to%20semantics/2017/04/06/pcasvdlsa/](https://ratsgo.github.io/from frequency to semantics/2017/04/06/pcasvdlsa/))
+* [LSA 이미지 출처](https://ratsgo.github.io/from frequency to semantics/2017/04/06/pcasvdlsa/)
 * [LDA 이미지 출처](https://blog.naver.com/chunjein/220946362463)
 
