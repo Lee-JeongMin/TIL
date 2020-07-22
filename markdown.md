@@ -83,3 +83,48 @@ print(random.sample(numbers,6))
 | 1    | 홍길동 |
 | 2    | 김철수 |
 
+
+
+## 수학 수식
+
+`$$`을 사용하여 수식을 입력할 수 있다. $$ 사이에 수식을 입력하면 된다.
+
+![캡처](markdown-images/%EC%BA%A1%EC%B2%98-1595406042478.PNG)
+$$
+\vec{a}, \lVert a \rVert, {\operatorname{y}\over\operatorname{x}}, \sqrt{2}
+$$
+
+$$
++, -, \times, \div, \{\}, \cdots, \text{한글 작성}
+$$
+
+$$
+a^2, a_2, a^{2+2}, a_{ij},\sum_{k=1}^n k^2, 	\frac{2}{4}, 	{2 \over 4}, \left(\frac{2}{4} \right), {n \choose k}
+$$
+
+$$
+	\begin{pmatrix} x & y \\ z & v \end{pmatrix}, 	\begin{Bmatrix} x & y \\ z & v \end{Bmatrix}, 	\begin{vmatrix} x & y \\ z & v \end{vmatrix}, 	\begin{Vmatrix} x & y \\ z & v \end{Vmatrix}, 	\begin{matrix} x & y \\ z & v \end{matrix}
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
