@@ -54,3 +54,4 @@
 
 * [Natural_Language](https://github.com/Lee-JeongMin/TIL/blob/master/NLP/Natural_Language.md)
 * [Topic Model](https://github.com/Lee-JeongMin/TIL/blob/master/NLP/Topic_model.md)
+* [Text Summary](https://github.com/Lee-JeongMin/TIL/blob/master/NLP/Text_Summary.md)
