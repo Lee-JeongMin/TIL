@@ -4,35 +4,28 @@
 
 > PageRank 알고리즘을 확장시켜 문서 내의 핵심문장을 추출하는 알고리즘
 
-![textrank](C:%5CUsers%5Cstudent%5CDesktop%5CTIL%5Cmarkdown-images%5Ctextrank.PNG)
+![textrank](../markdown-images/textrank.PNG)
 
 위와 같은 사진의 경우를 예를 들어 생각해보자.
 
 1) 각 문장 (A, B, C, D)의 TextRank를 초기화한다.
-$$
-TR(A) = TR(B) = TR(C) = TR(D) = {\operatorname{1}\over\operatorname{4}\text{(문장의 수)}} = 0.25
-$$
+
+![textrank_1](../markdown-images/textrank_1.PNG)
+
 2) 문장 간의 유사도를 측정한다.
-$$
-Similarity(S_i, S_j) = 	{\operatorname{\left| w_k | w_k ∈ S_i \& w_k ∈ S_j \right|}\over\operatorname{log(	\left| S_i \right|)+log(	\left| S_j \right|)}}
-$$
+
+![textrank_2](../markdown-images/textrank_2.PNG)
 
 * 문장 S_i와 문장 S_j의 단어의 개수에서 두 문장에서 공통으로 들어간 단어의 개수로 나누면 된다.
 
 3) TR  공식을 통해 TextRank 계산 - 반복
-$$
-TR(S_i) = (1-d) + d \times	\sum_{V_j∈In(V_i)}{\operatorname{w_{ji}}\over\operatorname{\sum_{V_k∈Out(V_j)}}}TR(S_j)
-$$
+
+![textrank_3](../markdown-images/textrank_3.PNG)
 
 
 (if d=1)
-$$
-TR(A) ={\operatorname{0.2}\over\operatorname{0.2+0.4}} \times0.25 + {\operatorname{0.3}\over\operatorname{0.3}} \times0.25 = 0.33
-$$
 
-$$
-TR(B) ={\operatorname{0.2}\over\operatorname{0.2+0.3}} \times0.25 + {\operatorname{0.4}\over\operatorname{0.4}} \times0.25 = 0.35
-$$
+![textrank_4](../markdown-images/textrank_4.PNG)
 
 따라서 , 문장 B가 중요함을 알 수 있다.
 
