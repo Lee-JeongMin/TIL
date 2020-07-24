@@ -10,20 +10,20 @@
 
 ### cross-correlation
 
-![cnn_cc](../markdown-images/cnn_cc.png)
+<img src="../markdown-images/cnn_cc.png" alt="cnn_cc" style="zoom:57%;" />
 
 ### stride
 
 * filter(kernel)를 지정된 간격으로 움직이는데 이 간격을 stride라고 한다.
 
-<img src="../markdown-images/cnn_stride.png" alt="cnn_stride" style="zoom:67%;" />
+<img src="../markdown-images/cnn_stride.png" alt="cnn_stride" style="zoom:57%;" />
 
 ### padding
 
 * Feature map의 크기를 입력 이미지와 같게하려면 이미지 외곽에 필요한만큼 zero-padding를 삽입한다.
 * Feature map의 크기 조절 뿐만아니라 이미지 외곽 데이터의 특징을 살리기 위해서도 사용이 된다.
 
-<img src="../markdown-images/cnn_padding.png" alt="cnn_padding" style="zoom: 67%;" />
+<img src="../markdown-images/cnn_padding.png" alt="cnn_padding" style="zoom: 57%;" />
 
 ## Pooling Layer
 
@@ -37,7 +37,7 @@
 
 * pooling layer는 convolution layer처럼 weight를 갖지 않는다.
 
-  <img src="../markdown-images/cnn_pooling.png" alt="cnn_pooling" style="zoom:67%;" />
+  <img src="../markdown-images/cnn_pooling.png" alt="cnn_pooling" style="zoom:57%;" />
 
 ## Upsampling / Transposed convolution
 
@@ -51,7 +51,7 @@
 * 다만 convolution layer에서의 W는 4개씩 동일한 상태로 존재한다. W0(빨간 화살표)가 4개 존재하게 된다.
 * 더 자세한 설명은 [여기](https://ratsgo.github.io/deep%20learning/2017/04/05/CNNbackprop/)참고하기
 
-<img src="../markdown-images/cnn_backpropagation.png" alt="cnn_backpropagation" style="zoom:67%;" />
+<img src="../markdown-images/cnn_backpropagation.png" alt="cnn_backpropagation" style="zoom:57%;" />
 
 ## CNN의 문제점
 
