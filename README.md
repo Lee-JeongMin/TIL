@@ -43,9 +43,9 @@
 
 * LSTM
 
-* CNN
+* [CNN](https://github.com/Lee-JeongMin/TIL/blob/master/Deep_Learning/Convolutional-Neural-Network.md)
 
-* Autoencoder
+* [Autoencoder](https://github.com/Lee-JeongMin/TIL/blob/master/Deep_Learning/Autoencoder.md)
 
 * [GAN](https://github.com/Lee-JeongMin/TIL/blob/master/Deep_Learning/Generative-Adversarial-Network.md)
 
@@ -55,4 +55,4 @@
 * [Natural Language](https://github.com/Lee-JeongMin/TIL/blob/master/NLP/Natural_Language.md)
 * [Topic Model](https://github.com/Lee-JeongMin/TIL/blob/master/NLP/Topic_model.md)
 * [Text Summary](https://github.com/Lee-JeongMin/TIL/blob/master/NLP/Text_Summary.md)
-* Word Embedding
+* [Word Embedding](https://github.com/Lee-JeongMin/TIL/blob/master/NLP/Word _Embedding.md)
