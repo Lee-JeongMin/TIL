@@ -1,6 +1,6 @@
-## RNN & LSTM
+## 순환 신경망
 
-### 순환신경망(Recurrent Neural Network)
+### RNN(Recurrent Neural Network)
 
 > 히든 노드에 대한 출력값이 다시 입력으로 연결되는 순환적인 구조를 갖는 인공신경망의 한 종류이다. 주로 음성, 문자 등 순차적인 데이터를 학습하는데 유용하다.
 

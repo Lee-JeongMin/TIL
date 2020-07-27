@@ -39,7 +39,7 @@
 
 ## Deep Learning
 
-* [RNN]([https://github.com/Lee-JeongMin/TIL/blob/master/Deep_Learning/RNN-LSTM-GRU.md#%EC%88%9C%ED%99%98%EC%8B%A0%EA%B2%BD%EB%A7%9Drecurrent-neural-network](https://github.com/Lee-JeongMin/TIL/blob/master/Deep_Learning/RNN-LSTM-GRU.md#순환신경망recurrent-neural-network))
+* [RNN](https://github.com/Lee-JeongMin/TIL/blob/master/Deep_Learning/RNN-LSTM-GRU.md#rnnrecurrent-neural-network)
 * [LSTM](https://github.com/Lee-JeongMin/TIL/blob/master/Deep_Learning/RNN-LSTM-GRU.md#lstmlong-short-term-memory)
 * [GRU](https://github.com/Lee-JeongMin/TIL/blob/master/Deep_Learning/RNN-LSTM-GRU.md#grugated-recurrent-unit)
 * [CNN](https://github.com/Lee-JeongMin/TIL/blob/master/Deep_Learning/Convolutional-Neural-Network.md)
