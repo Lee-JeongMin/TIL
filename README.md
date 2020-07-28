@@ -17,7 +17,7 @@
 ### Supervised Learning
 
 * [KNN](https://github.com/Lee-JeongMin/TIL/blob/master/Machine_Learning/Supervised_Learning/K-nearest_neighbor.md)
-* Decesion Tree
+* [Decesion Tree](https://github.com/Lee-JeongMin/TIL/blob/master/Machine_Learning/Supervised_Learning/Decision-Tree.md)
 * SVM
 * Linear Regression
 * Logistic Regression
