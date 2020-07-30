@@ -16,7 +16,7 @@
 
 * 입력으로 해당하는 단어를 입력하면 주변단어를 출력한다.
 * 각 단어들은 ont-hot인코딩하여 입력되고 출력된다.
-* 아래는 Skip-gram를 그림으로 나타낸 것이다.[이미지출처]([https://ratsgo.github.io/from%20frequency%20to%20semantics/2017/03/30/word2vec/](https://ratsgo.github.io/from frequency to semantics/2017/03/30/word2vec/))
+* 아래는 Skip-gram를 그림으로 나타낸 것이다.[이미지출처](https://ratsgo.github.io/from%20frequency%20to%20semantics/2017/03/30/word2vec/)
 
 ![skip-gram_arch](../markdown-images/skip-gram_arch.png)
 
