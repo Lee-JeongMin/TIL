@@ -53,4 +53,4 @@
 * [Topic Model](https://github.com/Lee-JeongMin/TIL/blob/master/NLP/Topic_model.md)
 * [Text Summary](https://github.com/Lee-JeongMin/TIL/blob/master/NLP/Text_Summary.md)
 * [Word Embedding](https://github.com/Lee-JeongMin/TIL/blob/master/NLP/Word_Embedding.md)
-* [Word2Vec](https://github.com/Lee-JeongMin/TIL/blob/master/NLP/Word2Vec(cbow, skip-gram).md)
+* [Word2Vec](https://github.com/Lee-JeongMin/TIL/blob/master/NLP/Word2Vec(cbow_skip-gram).md)
