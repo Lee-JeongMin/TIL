@@ -381,9 +381,40 @@ grammar = r"""
          }<VDB|IN>+{"""  # VBD랑 IN은 Chunk에서 빼낸다.
 ```
 
+### 어간 추출(Stemming)
 
+> 단어의 어간을 추출하는 작업
+>
+> ex) 단어 : cats  -> 어간 : cat,  접사 : -s
 
+```python
+from nltk.stem import PorterStemmer
+s=PorterStemmer()
+words=['policy', 'doing', 'organization', 'have', 'going', 'love', 'lives', 'fly', 'dies', 'watched', 'has', 'starting']
+print([s.stem(w) for w in words])
+# 결과
+['polici', 'do', 'organ', 'have', 'go', 'love', 'live', 'fli', 'die', 'watch', 'ha', 'start']
+```
 
+* 어간을 추출하는 알고리즘은 Porter Stemmer와 Lancaster Stemmer가 있다. 
+* 둘은 다른 알고리즘을 사용하므로 둘 다 사용해보고 사용자가 판단해서 사용한다.
+
+### 표제어 추출(Lemmatization)
+
+> 표제어란 단어들이 다른형태를 가지고 있어도 그 뿌리 단어를 찾는 것을 의미한다.
+>
+> ex) am, are, is -> be(표제어)
+
+```python
+from nltk.stem import WordNetLemmatizer
+n=WordNetLemmatizer()
+words=['policy', 'doing', 'organization', 'have', 'going', 'love', 'lives', 'fly', 'dies', 'watched', 'has', 'starting']
+print([n.lemmatize(w) for w in words])
+# 결과
+['policy', 'doing', 'organization', 'have', 'going', 'love', 'life', 'fly', 'dy', 'watched', 'ha', 'starting']
+```
+
+* 표제어는 어간 추출과 달리 **단어의 형태가 적절히 보존되는 특징**을 지닌다.
 
 ### 참고 문헌
 
