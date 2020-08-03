@@ -49,6 +49,8 @@
 >
 >의미를 파악하기 위해선 단어사전이 필요하고 주변단어와의 비교가 필요하다.
 
+
+
 ### Lesk Algorithm
 
 >문장에 사용된 중의성을 가진 단어의 뜻을 단어사전(워드넷)에 뜻풀이, 예제 문항에 등장하는 단어와 분석 문장의 단어와 비교하여 겹치는 단어가 많은 뜻풀이를 선택해 단어의 의미를 파악하는 알고리즘이다.
@@ -60,3 +62,9 @@
 > 규칙기반 알고리즘으로 10명이 느끼는 감정 상태를 조사해서 얻은 점수(-4 ~ +4)를 기반으로 문장의 감정상태를 추정한다.
 
 * nltk.downloader.download('vader_lexicon','download_dir='./dataset/)을 다운 받으면 된다.
+
+
+
+### 소스코드
+
+* [TextRank](https://github.com/Lee-JeongMin/TIL/blob/master/NLP/source_code/TextRank.py)

@@ -53,7 +53,15 @@
 
 * 이후 n-gram으로 선택한 단어쌍은 label을 1로 부여하고, 랜덤하게 선택된 단어 쌍에는 label을 0으로 부여해 이진분류로 만든다.
 
-  
+
+###  소스 코드
+
+* [Skipgram(alice_in_wonderland)](https://github.com/Lee-JeongMin/TIL/blob/master/NLP/source_code/Skipgram.py)
+* [SkipGramNegativeSampling(alice_in_wonderland)](https://github.com/Lee-JeongMin/TIL/blob/master/NLP/source_code/SkipgramNegativeSampling.py)
+* SkipGramNegativeSampling(IMDB)
+  * [dataProcess](https://github.com/Lee-JeongMin/TIL/blob/master/NLP/source_code/1.dataProcess.py)
+  * [SGNS](https://github.com/Lee-JeongMin/TIL/blob/master/NLP/source_code/2.SGNS(network).py)
+  * [Con1D](https://github.com/Lee-JeongMin/TIL/blob/master/NLP/source_code/3.IMDB(Conv1D).py)
 
 ### 참고문헌
 

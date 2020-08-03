@@ -61,6 +61,13 @@ A_k는 위와 같은 식으로 만들어지게 되고 가장 중요한 토픽만
 
  
 
+### 소스코드
+
+* [TF-IDF](https://github.com/Lee-JeongMin/TIL/blob/master/NLP/source_code/tfidf.py)
+* [SVD](https://github.com/Lee-JeongMin/TIL/blob/master/NLP/source_code/SVD.py)
+* [LSA](https://github.com/Lee-JeongMin/TIL/blob/master/NLP/source_code/LSA.py)
+* [LDA](https://github.com/Lee-JeongMin/TIL/blob/master/NLP/source_code/LDA.py)
+
 ### 참고 문헌
 
 * [LSA 이미지 출처](https://ratsgo.github.io/from%20frequency%20to%20semantics/2017/04/06/pcasvdlsa/)
