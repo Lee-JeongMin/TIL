@@ -61,7 +61,7 @@
 * SkipGramNegativeSampling(IMDB)
   * [dataProcess](https://github.com/Lee-JeongMin/TIL/blob/master/NLP/source_code/1.dataProcess.py)
   * [SGNS](https://github.com/Lee-JeongMin/TIL/blob/master/NLP/source_code/2.SGNS(network).py)
-  * [Con1D](https://github.com/Lee-JeongMin/TIL/blob/master/NLP/source_code/3.IMDB(Conv1D).py)
+  * [Conv1D](https://github.com/Lee-JeongMin/TIL/blob/master/NLP/source_code/3.IMDB(Conv1D).py)
 
 ### 참고문헌
 
